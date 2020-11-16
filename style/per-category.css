@@ -1,0 +1,385 @@
+
+.column{
+    width: 30%;
+    margin: 10px;
+    margin-top: 80px;
+
+}
+
+.image,.active-image{
+    margin: 20px;
+    margin-bottom: 0px ;
+    width: 100%;
+}
+
+.image:hover{
+    opacity: 0.7;
+    cursor:zoom-in;
+}
+
+#container{
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    max-height: 100px;
+}
+
+
+
+#heading{
+    margin-top: 225px;
+    text-align: center;
+    font-size: 5em;
+}
+
+#overlay{
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height:100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    justify-content: center;
+    margin: auto;
+}
+
+#overlay:hover{
+    cursor: zoom-out;
+}
+
+.overlay-visible{
+    display: flex!important;
+}
+
+#overlay img{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    max-height: 80%;
+}
+
+#overlay img:hover{
+    cursor: default;
+}
+
+#cross{
+    display: none;
+}
+
+#next-btn{
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    color: white;
+}
+
+#prev-btn{
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+#next-btn:hover, #prev-btn:hover{
+    cursor: pointer;
+}
+
+#name,#username,#likes{
+    color: black;
+    font-size: 1.2em;
+    border: black 2px solid;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    min-width: 250px;
+    margin: 10px;
+}
+#name:hover,#username:hover,#likes:hover{
+    cursor: default;
+    background: white;
+    transform: scale(1.1);
+}
+
+#artist {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#interact{
+  display: flex;
+  position: absolute;
+  right: 15%;
+  top: 6%;
+  flex-direction: column;
+}
+
+#download{
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+  transform: translateY(2px);
+}
+
+#save{
+  font-size: 2em;
+  color: white;
+}
+
+#save:hover{
+  cursor: pointer;
+}
+
+#save-not-loggedin{
+  font-size: 2em;
+  color: white;
+}
+
+#save-not-loggedin:hover{
+  cursor: pointer;
+}
+
+#artist a{
+    text-decoration: none;
+    color: black;
+}
+
+#no-image {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#no-image img{
+    width: 40%;
+}
+
+@media(max-height:500px) and (orientation : landscape){
+  #interact{
+    display: flex;
+    position: absolute;
+    right: auto;
+    left: 10px;
+    top: 10px;
+    flex-direction: column;
+  }
+
+}
+
+
+@media(max-width:1100px){
+    #heading{
+        margin-top: 300px;
+        /* margin: 0px; */
+    }
+
+    #container{
+        width: 100%;
+    }
+
+    #cross{
+        display: block;
+        position: absolute;
+        font-size: 3em;
+        color: white;
+        right: 30px;
+        top: 10px;
+
+    }
+
+    #name,#username,#likes{
+        color: black;
+        font-size: 1.2em;
+        border: black 2px solid;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        padding: 10px 20px 10px 20px;
+        min-width: 170px;
+        margin: 10px;
+    }
+
+    #prev-btn{
+        left: 10px;
+    }
+
+    #next-btn{
+        right: 10px;
+    }
+
+    #overlay img{
+        margin-top: 50px;
+        margin-bottom: 0px;
+
+    }
+
+}
+
+@media(max-width:767px) and (orientation : portrait){
+    #heading{
+        margin: 200px ;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 40px;
+        max-width: 80vw;
+
+    }
+
+    #bs-example-navbar-collapse-1{
+        /* position: relative; */
+        /* display: grid;
+        grid-template-columns: auto auto auto; */
+        transform: translateY(+20px);
+        padding:  0px;
+        border: hidden;
+        background: rgb(17, 43, 46)!important;
+        z-index: -1;
+        width: 100%;
+        margin: 0px!important;
+    }
+
+    .link-active{
+        transition: ease-in-out 0.5s;
+        color: rgb(243, 191, 132);
+        background:rgb(17, 43, 46)!important;
+        border-radius:unset!important;
+    }
+
+    #container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+
+    img.image, img.active-image{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    #overlay{
+        background: rgba(0, 0, 0, 0.9);
+
+    }
+
+    .overlay-visible{
+        display: block!important;
+    }
+
+    #overlay img{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 160px;
+        margin: 0px;
+    }
+
+    #artist {
+        position: absolute;
+        left: 150px;
+        top: 10px;
+        height: 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+
+    }
+
+    #name,#username,#likes{
+        color: white!important;
+        font-size: 1.2em;
+        border:hidden;
+        background:transparent;
+        border-radius: 20px;
+        /* padding: 3px 20px 3px 20px; */
+        min-width: 300px;
+        height: 30px;
+        margin: 0px;
+    }
+
+    #name:hover,#username:hover,#download:hover,#likes:hover{
+        cursor: default;
+        background:transparent;
+        transform: scale(1);
+    }
+
+    #username a,#download a{
+        color: white;
+    }
+
+    #next-btn,#prev-btn{
+        top: 80%;
+    }
+
+    #next-btn{
+        right: 5px;
+    }
+
+    #prev-btn{
+        left: 5px;
+    }
+
+    #cross{
+        display: block;
+        position: absolute;
+        font-size: 3em;
+        color: white;
+        right: 5px;
+        top: 5px;
+
+    }
+
+    #interact{
+      display: flex;
+      position: absolute;
+      right: 50%;
+      top: auto;
+      bottom: 30px;
+      transform: translateX(50%);
+      flex-direction: row;
+    }
+
+    #download{
+      text-decoration: none;
+      font-size: 2em;
+      color: white;
+      transform: translateY(2px);
+      margin-right: 50px
+    }
+
+    #save{
+      font-size: 2em;
+      color: white;
+    }
+
+
+
+
+
+}
